@@ -1,0 +1,40 @@
+.chart-container {
+  cursor: pointer;
+}
+
+.container {
+  width: 100% !important;
+  height: 100vh !important;
+  display: inline-block;
+}
+
+.chart-part {
+  width: 75% !important;
+  height: 97vh !important;
+  display: inline-block;
+}
+
+.text-part {
+  background-color: #46a0a3;
+  vertical-align: top;
+  width: 25% !important;
+  height: 100vh !important;
+  display: inline-block;
+}
+
+.textbox {
+  margin-left: 8%;
+  margin-right: 10%;
+  width: 80%;
+  height: 50%;
+  font-size: 15px;
+  resize: vertical;
+  border: none;
+  text-align: justify;
+}
+
+h2 {
+  color: white;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}

@@ -1,0 +1,29 @@
+<div class="container">
+  <div class="text-part" align="center">
+    <h2> Type your recipe to see the tree: </h2>
+    <textarea #tarea  class="textbox" (input)="detectSentence(tarea)">{{text}}</textarea>
+  </div>
+
+  <div class="chart-part">
+    <ngx-graph
+      class="chart-container"
+      [draggingEnabled]="false"
+      [panningEnabled]=true
+      [links]="tree.links"
+      [nodes]="tree.nodes"
+      [zoomLevel]="0.9"
+    >
+      <ng-template #nodeTemplate let-node>
+        <svg width="120" height="100">
+          <rect x="0" y="0" height="100" width="120" style="fill:cadetblue;stroke-width:5;opacity:1"></rect>
+          <circle cx="50%" cy="25%" r="10" style="stroke:{{strokeType[node.label]}}; stroke-width:2; fill:{{fillType[node.data.label]}}" />
+
+          <text x="50%" y="50%" fill="black" dominant-baseline="middle" text-anchor="middle">{{node.label}}</text>
+          <text x="50%" y="70%" fill="white" dominant-baseline="middle" text-anchor="middle" font-size="12">{{node.data.label}}</text>
+          <text x="50%" y="90%" fill="black" dominant-baseline="middle" text-anchor="middle">{{node.data.value}}</text>
+        </svg>
+      </ng-template>
+    </ngx-graph>
+  </div>
+</div>
+
